@@ -758,7 +758,8 @@ static NSMutableDictionary <NSString* ,NSNumber *> *_zfPlayRecords;
     if (pauseByEvent) {
         [self.currentPlayerManager pause];
     } else {
-        [self.currentPlayerManager play];
+        self.currentPlayerManager.assetURL = self.assetURL;
+//        [self.currentPlayerManager play];
     }
 }
 
