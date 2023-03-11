@@ -31,7 +31,7 @@
 
 #if __has_include(<IJKMediaFramework/IJKMediaFramework.h>)
 #import <IJKMediaFramework/IJKMediaFramework.h>
-
+ 
 @interface ZFIJKPlayerManager : NSObject <ZFPlayerMediaPlayback>
 
 @property (nonatomic, strong, readonly) IJKFFMoviePlayerController *player;
