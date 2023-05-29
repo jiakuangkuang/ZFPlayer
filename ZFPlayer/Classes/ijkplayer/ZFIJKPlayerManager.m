@@ -423,6 +423,7 @@
     } else {
         /// Fix first called the lastVolume is 0.
         if (self.lastVolume == 0) self.lastVolume = self.player.playbackVolume;
+        self.lastVolume = self.lastVolume?self.lastVolume:1;
         self.player.playbackVolume = self.lastVolume;
     }
 }

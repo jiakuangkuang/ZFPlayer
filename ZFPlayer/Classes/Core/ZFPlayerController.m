@@ -154,7 +154,7 @@ static NSMutableDictionary <NSString* ,NSNumber *> *_zfPlayRecords;
         if (self.playerReadyToPlay) self.playerReadyToPlay(asset,assetURL);
         if (!self.customAudioSession) {
             // Apps using this category don't mute when the phone's mute button is turned on, but play sound when the phone is silent
-            [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionAllowBluetooth error:nil];
+            [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionAllowBluetooth|AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
             [[AVAudioSession sharedInstance] setActive:YES error:nil];
         }
         if (self.viewControllerDisappear) self.pauseByEvent = YES;
